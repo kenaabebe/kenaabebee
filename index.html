@@ -130,7 +130,25 @@
       .navlinks{position:fixed; inset:70px 0 auto 0; background:rgba(11,18,32,.98); padding:16px 20px; border-bottom:1px solid rgba(148,163,184,.12); display:none}
       .navlinks.open{display:flex}
       .navlinks a{padding:10px 4px}
+      /* Add for About section */
+      .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+      }
     }
+
+    /* Extra small screens */
+    @media (max-width: 600px) {
+      .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+      .about-grid .project .thumb img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
     /* Custom Cursor */
 .cursor {
   width: 20px;
@@ -260,7 +278,7 @@
   <!-- About -->
   <section id="about" class="container">
     <h2 class="section-title">About Me</h2>
-    <div class="grid" style="grid-template-columns:1fr 1fr; gap:24px">
+    <div class="grid about-grid" style="grid-template-columns:1fr 1fr; gap:24px">
       <div>
         <p>I’m a developer who loves turning ideas into polished products. I focus on readable code, thoughtful UX, and performance. I’m comfortable across the stack—from design systems to data modeling.</p>
         <p>When I’m not coding, you’ll find me reading about systems design, mentoring juniors, or exploring Addis coffee spots.</p>
@@ -292,6 +310,7 @@
     </div>
   </section>
 
+
   <!-- Contact -->
   <section id="contact" class="container">
     <h2 class="section-title">Contact</h2>
@@ -318,9 +337,18 @@
     <div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
       <span>© copyright<span id="year"></span> Kena Abebe</span>
       <div style="display:flex; gap:14px">
-        <a href="#">LinkedIn</a>
-        <a href="#">Twitter</a>
-         <a href="#">Telegram</a>
+       <!-- Add this where you want the Telegram & Email section to appear -->
+<section class="container" style="padding-top:0;">
+  <h3 style="margin-bottom:10px;">Connect Directly</h3>
+  <div style="display:flex; gap:18px; align-items:center; flex-wrap:wrap;">
+    <a class="btn" href="https://t.me/therealpablos" target="_blank" rel="noopener">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" style="width:20px;height:20px;vertical-align:middle;"> Telegram
+    </a>
+    <a class="btn" href="kenaabebee@gmail.com">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" style="width:20px;height:20px;vertical-align:middle;"> Email
+    </a>
+  </div>
+</section>
       </div>
     </div>
   </footer>
@@ -364,3 +392,4 @@
   </script>
 </body>
 </html>
+
